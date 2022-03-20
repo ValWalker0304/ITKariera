@@ -1,0 +1,204 @@
+========Познай паролата=======
+string p = Console.ReadLine();
+if (p == "s3cr3t!P@ssw0rd")
+{
+Console.WriteLine("Welcome");
+}
+else
+{
+Console.WriteLine("Wrong Password.");
+}
+========Време плюс 15 минути=======
+int h = int.Parse(Console.ReadLine());
+int m = int.Parse(Console.ReadLine());
+m += 15;
+if (m > 60)
+{
+m -= 60;
+h += 1;
+}
+if (h > 23)
+{
+h = h - 24;
+}
+if (m < 10)
+{
+Console.WriteLine(h + ":" + $"0{m}");
+}
+else
+{
+Console.WriteLine(h + ":" + m);
+}
+========Изписване на число до 9 с думи=======
+int n = int.Parse(Console.ReadLine());
+switch (n)
+{
+case 1: Console.WriteLine("едно"); break;
+case 2: Console.WriteLine("едно"); Console.WriteLine("две"); break;
+case 3: Console.WriteLine("едно"); Console.WriteLine("две"); Console.WriteLine("три"); break;
+case 4: Console.WriteLine("едно"); Console.WriteLine("две"); Console.WriteLine("три"); Console.WriteLine("четири"); break;
+case 5: Console.WriteLine("едно"); Console.WriteLine("две"); Console.WriteLine("три"); Console.WriteLine("четири"); Console.WriteLine("пет"); break;
+case 6: Console.WriteLine("едно"); Console.WriteLine("две"); Console.WriteLine("три"); Console.WriteLine("четири"); Console.WriteLine("пет"); Console.WriteLine("шест"); break;
+case 7: Console.WriteLine("едно"); Console.WriteLine("две"); Console.WriteLine("три"); Console.WriteLine("четири"); Console.WriteLine("пет"); Console.WriteLine("шест"); Console.WriteLine("седем"); break;
+case 8: Console.WriteLine("едно"); Console.WriteLine("две"); Console.WriteLine("три"); Console.WriteLine("четири"); Console.WriteLine("пет"); Console.WriteLine("шест"); Console.WriteLine("седем"); Console.WriteLine("осем"); break;
+case 9: Console.WriteLine("едно"); Console.WriteLine("две"); Console.WriteLine("три"); Console.WriteLine("четири"); Console.WriteLine("пет"); Console.WriteLine("шест"); Console.WriteLine("седем"); Console.WriteLine("осем"); Console.WriteLine("девет"); break;
+}
+========Бонус точки=======            
+int n = int.Parse(Console.ReadLine());
+int a = n;
+if (n <= 100)
+{
+n = n + 5;
+}
+else if (n > 100 && n < 1000)
+{
+n = n + ((20 * n)/100);
+}
+else if (n > 1000)
+{
+n = n + ((10 * n) / 100);
+}
+if (a % 2 == 0)
+{
+n+=1;
+}
+if (a % 5 == 0 && a % 10 != 0)
+{
+n += 2;
+}
+Console.WriteLine(n - a);
+Console.WriteLine(n);
+========Информация за скоростта=======
+decimal n = decimal.Parse(Console.ReadLine());
+if (n <= 10)
+{
+Console.WriteLine("Slow");
+}
+else if (n > 10 && n <= 50)
+{
+Console.WriteLine("Average");
+}
+else if (n > 50 && n <= 150)
+{
+Console.WriteLine("Fast");
+}
+else if (n > 150 && n <= 1000)
+{
+Console.WriteLine("Ultra Fast");
+}
+else
+{
+Console.WriteLine("Extremely Fast");
+}
+========Лица на фигури=======
+string f = Console.ReadLine();
+var a = double.Parse(Console.ReadLine());
+double s = 0;
+if (f.ToLower() == "square") 
+{
+s = a * a;
+Console.WriteLine(s);
+}
+else if (f.ToLower() == "circle")
+{
+s = Math.PI * a * a;
+Console.WriteLine(s);
+}
+if (f.ToLower() == "rectangle")
+{
+var d = double.Parse(Console.ReadLine());
+s = (d * a);
+Console.WriteLine(s);
+}
+else if (f.ToLower() == "triangle") 
+{
+var d = double.Parse(Console.ReadLine());
+s = (d * a) / 2;
+Console.WriteLine(s);
+}
+========Квартално магазинче=======
+string p = Console.ReadLine();
+string g = Console.ReadLine();
+switch (p)
+{
+case "coffee":
+switch (g)
+{
+case "Sofia": Console.WriteLine(k * 0.50); break;
+case "Varna": Console.WriteLine(k * 0.45); break;
+case "Plovdiv": Console.WriteLine(k * 0.40); break;
+}
+break;
+case "water":
+switch (g)
+{
+case "Sofia": Console.WriteLine(k * 0.80); break;
+case "Varna": Console.WriteLine(k * 0.70); break;
+case "Plovdiv": Console.WriteLine(k * 0.70); break;
+}
+break;
+case "beer":
+switch (g)
+{
+case "Sofia": Console.WriteLine(k * 1.20); break;
+case "Varna": Console.WriteLine(k * 1.10); break;
+case "Plovdiv": Console.WriteLine(k * 1.15); break;
+}
+break;
+case "sweets":
+switch (g)
+{
+case "Sofia": Console.WriteLine(k * 1.45); break;
+case "Varna": Console.WriteLine(k * 1.35); break;
+case "Plovdiv": Console.WriteLine(k * 1.30); break;
+}
+break;
+case "peanuts":
+switch (g)
+{
+case "Sofia": Console.WriteLine(k * 1.60); break;
+case "Varna": Console.WriteLine(k * 1.55); break;
+case "Plovdiv": Console.WriteLine(k * 1.50); break;
+}
+break;
+========Кино=======
+string cin = Console.ReadLine();
+double red = double.Parse(Console.ReadLine());
+double colona = double.Parse(Console.ReadLine());
+double result = (red * colona);
+switch (cin)
+{
+case "Premiere": result = (result * 12); Console.WriteLine(String.Format("{0:f2}", result)); break;
+case "Normal": result = (result * 7.5); Console.WriteLine(String.Format("{0:f2}", result)); break;
+case "Discount": result = (result * 5); Console.WriteLine(String.Format("{0:f2}", result)); break;
+}
+========Плод или зеленчук //със Switch()=======
+string p = Console.ReadLine();
+switch (p)
+{
+case "banana":Console.WriteLine("fruit");break;
+case "apple": Console.WriteLine("fruit"); break;
+case "kiwi": Console.WriteLine("fruit"); break;
+case "cherry": Console.WriteLine("fruit"); break;
+case "lemon": Console.WriteLine("fruit"); break;
+case "grape": Console.WriteLine("fruit"); break;
+case "tomato": Console.WriteLine("vegetable"); break;
+case "cucumber": Console.WriteLine("vegetable"); break;
+case "carrot": Console.WriteLine("vegetable"); break;
+case "pepper": Console.WriteLine("vegetable"); break;
+default: Console.WriteLine("Unknow"); break;
+}
+========Невалидно число=======
+int a = int.Parse(Console.ReadLine());
+if (a >=100 && a<=200 || a == 0)
+{
+//Console.WriteLine("Числото е валидно");
+}
+else
+{
+Console.WriteLine("invalid");
+}
+
+
+
+
