@@ -1,6 +1,6 @@
-maxNum :: Ord a => [a] -> a
+--maxNum :: Ord a => [a] -> a  "Ordarable"
 maxNum [x] = x
-maxNum (x:x':xs) = maxNum ((if x >= x' then x else x'):xs)
+maxNum (x:y:z) = maxNum ((if x >= y then x else y):z)
 
 main :: IO() --main function
 main = do 
