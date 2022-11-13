@@ -1,8 +1,10 @@
-string1 = "Hello World!" --string varianble (name --> string1)
-
-doubleIt x = x * 2  --int variable (name --> doubleIt)
+maxNum :: Ord a => [a] -> a
+maxNum [x] = x
+maxNum (x:x':xs) = maxNum ((if x >= x' then x else x'):xs)
 
 main :: IO() --main function
 main = do 
-    print(doubleIt 5)
-    print(string1)
+    input <- getLine
+    let n = words input
+    let intn = map (read::String->Int) n 
+    print(maxNum intn)
